@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Intelligence Artificielle</title>
+    <link rel="shortcut icon" href="src/favicon.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap" rel="stylesheet">
+</head>
+<body data-theme="root">
+    <div id="all">
+        <div id="navbar">
+            <img id="logo" src="src/ia96.png" alt="logo">
+            <button class="navlinks" onclick="opentab(event, 'presentation')" id="defaultOpen">Présentation</button>
+            <button class="navlinks fonctionnementContent" onclick="opentab(event, 'fonctionnement')">Fonctionnement</button>
+            <button class="navlinks metierContent" onclick="opentab(event, 'metier')">Métier</button>
+            <button class="navlinks exemplesContent" onclick="opentab(event, 'exemples')">Essayer avec GPT-3</button>
+            <div class="darkmodeSlider">
+                <p id="darkmode">Dark mode</p>
+                <input class="switch" type="checkbox" id="switch" />
+                <label class="switch" for="switch">Toggle</label>
+            </div>
+            
+        </div>
+        <div class="allContent">
+            <div id="presentation" class="content">
+                <h1>Ingenieur machine learning</h1>
+                <div class="textpresentation">
+                    <p>L'intelligence artificielle est l'utilisation de techniques de traitement automatique de l'information pour imiter les capacités de raisonnement et de décision de l'être humain. <br> <br> Les tâches relevant de l’IA sont parfois très simples pour les humains, comme par exemple reconnaître et localiser les objets dans une image, planifier les mouvements d’un robot pour attraper un objet, ou conduire une voiture. Elles requièrent parfois de la planification complexe, comme par exemple pour jouer aux échecs. <br> <br> Les tâches les plus compliquées requièrent beaucoup de connaissances et de sens commun, par exemple pour traduire un texte ou conduire un dialogue. Les méthodes manuelles se sont avérées très difficiles à appliquer pour des tâches en apparence très simples comme la reconnaissance d’objets dans les images ou la reconnaissance vocale. <br> <br> Les données venant du monde réel – les échantillons d’un son ou les pixels d’une image – sont complexes, variables et entachées de bruit.<br> <br> Comment une machine peut-elle transcrire la suite de nombres d’un signal sonore en série de mots tout en ignorant le bruit ambiant, l’accent du locuteur et les particularités de sa voix ? <br> <br>Comment une machine peut-elle identifier un chien ou une chaise dans le tableau de nombre d’une image quand l’apparence d’un chien ou d’une chaise et des objets qui les entourent peuvent varier infiniment ? </p>
+                    <img src="https://wordpress.appsilon.com/wp-content/uploads/2018/08/predictions.png" alt="Exemple YoloV3">
+                </div>
+                <button onclick="opentab(event, 'fonctionnement')" class="fonctionnementBtn next" style="vertical-align:middle">
+                    <span>Suivant </span>
+                </button>
+            </div>
+            <div id="fonctionnement" class="content">
+                <h1>How it works ?</h1>
+                <div class="textfonctionnement">
+                    <p>L’apprentissage automatique (de l’anglais Machine Learning) est une branche de l’intelligence artificielle qui permet aux ordinateurs d’apprendre et d’exécuter plusieurs tâches sans être explicitement programmés pour les faire. <br><br>Il s’agit, par exemple, des tâches comme le diagnostic des problèmes ou la prédiction des résultats dans les situations où l’utilisation des algorithmes plus classiques est problématique. En se nourrissant de nouvelles données, les algorithmes de l’apprentissage automatique sont capables d’évoluer en permanence. <br><br>Le « Machine Learning » s’appuie sur des algorithmes un peu particuliers, à partir d’exemples basés sur une approche statistique. Cela se passe en deux phases pour des algorithmes qu’on appelle supervisés : <br><br>– La phase de généralisation qui consiste à estimer un modèle à partir de données en entrée et de données en sortie. L’objectif est alors de trouver la relation (le modèle) entre les deux types de données (celles en entrée et celles en sortie), en ajustant les paramètres de son calcul. L’estimation du modèle consiste à résoudre toujours une tâche pratique, par exemple reconnaître la présence d’un chat dans une photographie. <br><br>– La phase de prédiction (la mise en production du modèle) qui va produire une réponse correcte sur des données similaires, mais sur lesquelles le programme n’a pas été entrainé. Dans cette phase, une nouvelle photo de chat sera automatiquement reconnue comme telle. </p>
+                    <img src="https://mlad.kaspersky.com/wp-content/uploads/sites/21/2020/06/scheme-4.jpg" alt="" srcset="">
+                </div>
+                <button onclick="opentab(event, 'metier')" class="metierBtn next" style="vertical-align:middle">
+                    <span>Suivant </span>
+                </button>
+            </div>
+            <div id="metier" class="content">
+                <h1>Vers un métier</h1>
+                <div class="textmetier">
+                    <p>Être ingénieur en machine learning : <br><br>Son rôle principal est de sélectionner, d’entrainer et déployer des modèles d’apprentissage en se basant sur un jeu de données. Il pourra aussi développer des algorithmes et écrire des programmes pour extraire des informations pertinentes qui serviront à la phase de modélisation.  <br><br>Le but est de rendre l’ordinateur capable de réagir à des problèmes complexes.  <br><br>C’est un travail à la croisée des chemins entre la science, l’informatique et les mathématiques. Ce spécialiste peut également être en charge du data engineering qui garantit la propreté de toutes les données. <br><br>Souvent confondu avec le data analyst - spécialisé dans une catégorie de données autour d’une question business ou stratégique - le data scientist a une vision plus globale et un rôle plus transversal. <br><br>Côté technique, l’ingénieur ML connaît les frameworks comme TensorFlow et PyTorch. Python et C++ font partie de son univers. La connaissance de Git, Docker et Cuda est évidemment un plus. L’anglais ne l’effraie pas, il le comprend et l’utilise très bien.</p>
+                    <img src="https://www.esiee-it.fr/sites/default/files/styles/1366x650/public/2020-11/devenez-ingenieur-esiee-it.jpg?itok=jzdooh4T" alt="" srcset="">
+                </div>
+                <button onclick="opentab(event, 'exemples')" class="exemplesBtn next" style="vertical-align:middle">
+                    <span>Suivant </span>
+                </button>
+            </div>
+            <div id="exemples" class="content">
+                <h1>Essayer une IA avec GPT-3</h1>
+                <p>Voici un lien directement relié à une intelligence artificielle nommé GPT-3 developpé par OpenAI ! (création d'un compte nécéssaire)</p>
+                    <a href="https://beta.openai.com/playground" id="openai">J'y vais !</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>

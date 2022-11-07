@@ -1,0 +1,500 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+   Reset CSS
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: "";
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/*End reset CSS*/
+
+:root {
+    --bg-color: #e9eaeb;
+    --nav-color: #2f49d1;
+    --font-color: #8196ef;
+    --active-links: #435bd5;
+    --active-color: white;
+    --dark-img: #3962f2;
+    --shadow: #989396;
+    --dark: #161618;
+    --gradient-one: #30cfd0;
+    --gradient-two: #330867;
+    --text-color: black;
+}
+
+[data-theme="dark"] {
+    --text-color: white;
+    --gradient-one: rgba(245, 107, 244, 0.79);
+    --gradient-two: #efad05;
+    --dark: white;
+    --shadow: #2c2c2c;
+    --dark-img: #1f1f21;
+    --active-color: #1f8451;
+    --active-links: #1d3126;
+    --font-color: #828489;
+    --bg-color: #21232f;
+    --nav-color: #161618;
+}
+
+#navbar {
+    position: fixed;
+    display: inline;
+    float: left;
+    background-color: var(--nav-color);
+    width: 225.75px;
+    height: 92.2%;
+    padding: 20px;
+    border-radius: 0.8em;
+    box-shadow: 4px 4px 4px var(--shadow);
+}
+
+body {
+    background-color: var(--bg-color);
+    transition: 350ms ease-in-out;
+}
+
+content h1 {
+    margin-left: 19em;
+}
+
+.navlinks {
+    display: block;
+    background-color: inherit;
+    padding: 22px 5px;
+    min-width: 220.75px;
+    max-width: 220.75px;
+    border: none;
+    outline: none;
+    text-align: left;
+    cursor: pointer;
+    transition: 0.3s;
+    font-size: 17px;
+    border-radius: 1em;
+    margin-top: 20px;
+    position: relative;
+    right: 0px;
+    padding-left: 20px;
+}
+
+#navbar img {
+    background-color: var(--dark-img);
+    width: 60px;
+    height: 60px;
+    margin: 0;
+    padding-left: 35%;
+    padding-right: 35%;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    border-radius: 0.5em;
+}
+
+.navlinks {
+    color: var(--font-color);
+    text-decoration: none;
+    font-family: "Lato", sans-serif;
+}
+
+.navlinks.active {
+    background-color: var(--active-links);
+    color: var(--active-color);
+}
+
+.navlinks:hover {
+    background-color: var(--active-links);
+}
+
+.darkmodeSlider {
+    display: flex;
+    flex-direction: row;
+    width: 225.75px;
+    height: 80px;
+    position: absolute;
+    bottom: 30px;
+    background-color: var(--dark-img);
+    border-radius: 10px;
+    justify-content: center;
+}
+
+#darkmode {
+    font-family: "Lato", sans-serif;
+    font-weight: 600;
+    color: var(--dark);
+    position: absolute;
+    top: 8px;
+    left: 30px;
+    font-size: 20px;
+}
+
+.darkmodeSlider input {
+    position: absolute;
+    top: 33px;
+    left: 150px;
+}
+
+.allContent {
+    margin: 5px 20px 0px 285px;
+    height: 95vh;
+}
+
+.content {
+    height: auto;
+    min-height: 100%;
+    border: 5px solid var(--dark-img);
+    width: 100%;
+    margin-top: 5px;
+    border-radius: 0.8em;
+    box-shadow: 4px 4px 4px var(--shadow);
+}
+
+input[type="checkbox"] {
+    height: 0;
+    width: 0;
+    visibility: hidden;
+}
+
+label {
+    cursor: pointer;
+    text-indent: -9999px;
+    width: 60px;
+    height: 30px;
+    background: grey;
+    display: block;
+    border-radius: 100px;
+    position: relative;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+    position: absolute;
+    left: 140px;
+    top: 23px;
+}
+
+label:after {
+    content: "";
+    position: absolute;
+    top: 4px;
+    left: 5px;
+    width: 22px;
+    height: 22px;
+    background: #fff;
+    border-radius: 90px;
+    transition: 0.3s;
+}
+
+input:checked+label {
+    background-color: #0bc05c;
+}
+
+input:checked+label:after {
+    left: calc(100% - 5px);
+    transform: translateX(-100%);
+}
+
+label:active:after {
+    width: 50px;
+}
+
+#presentation h1 {
+    font-family: "Poppins", sans-serif;
+    text-align: center;
+    font-size: 70px;
+    background: linear-gradient(to right,
+            var(--gradient-one) 0%,
+            var(--gradient-two) 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: 350ms ease-in-out;
+    line-height: 90px;
+}
+
+#presentation p {
+    font-family: "Lato", sans-serif;
+    color: var(--text-color);
+    margin-right: 15px;
+    margin-left: 15px;
+    font-weight: 300;
+}
+
+#presentation img {
+    width: 50%;
+    height: 40%;
+    border-radius: 0.8em;
+}
+
+.textpresentation {
+    display: flex;
+    flex-direction: row;
+    margin-right: 15px;
+}
+
+/* NEXT BTN */
+
+.next {
+    display: inline-block;
+    border-radius: 4px;
+    background: var(--dark-img);
+    border: none;
+    color: var(--dark);
+    text-align: center;
+    font-size: 28px;
+    padding: 15px;
+    width: 160px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+    position: fixed;
+    bottom: 50px;
+    right: 40px;
+}
+.next span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
+
+.next span:after {
+    content: "\00bb";
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+}
+
+.next:hover span {
+    padding-right: 25px;
+}
+
+.next:hover span:after {
+    opacity: 1;
+    right: 0;
+}
+#fonctionnement h1{
+    font-family: "Poppins", sans-serif;
+    text-align: center;
+    font-size: 70px;
+    background: linear-gradient(to right,var(--gradient-one) 0%,var(--gradient-two) 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: 350ms ease-in-out;
+    line-height: 90px;
+}
+#fonctionnement p{
+    font-family: 'Lato', sans-serif;
+    color: var(--text-color);
+    margin-right: 15px;
+    margin-left: 15px;
+    font-weight: 300;
+}
+#fonctionnement img{
+    width: 50%;
+    height: 40%;
+    border-radius: 0.8em;
+}
+.textfonctionnement{
+    display: flex;
+    flex-direction: row;
+    margin-right: 15px;
+}
+#metier h1{
+    font-family: "Poppins", sans-serif;
+    text-align: center;
+    font-size: 70px;
+    background: linear-gradient(to right,var(--gradient-one) 0%,var(--gradient-two) 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: 350ms ease-in-out;
+    line-height: 90px;
+}
+#metier p{
+    font-family: 'Lato', sans-serif;
+    color: var(--text-color);
+    margin-right: 15px;
+    margin-left: 15px;
+    font-weight: 300;
+}
+#metier img{
+    width: 50%;
+    height: 40%;
+    border-radius: 0.8em;
+}
+.textmetier{
+    display: flex;
+    flex-direction: row;
+    margin-right: 15px;
+}
+#exemples h1{
+    font-family: "Poppins", sans-serif;
+    text-align: center;
+    font-size: 70px;
+    background: linear-gradient(to right,var(--gradient-one) 0%,var(--gradient-two) 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: 350ms ease-in-out;
+    line-height: 90px;
+}
+#exemples p{
+    color: var(--text-color);
+    margin-right: 15px;
+    margin-left: 15px;
+    font-weight: 300;
+    text-align: center;
+    font-family: 'Lato', sans-serif;
+}
+#exemples img{
+    width: 50%;
+    height: 40%;
+    border-radius: 0.8em;
+}
+.textexemples{
+    display: flex;
+    flex-direction: row;
+    margin-right: 15px;
+}
+#openai {
+    display: flex;
+    justify-content: center;
+    width: 170px;
+    margin: 30px auto;
+    padding: 22px 17px;
+    font-size: 28px;
+    background: var(--dark-img);
+    border-radius: 7px;
+    color: var(--dark);
+    transition: all 0.5s;
+    cursor: pointer;
+    text-decoration: none;
+    font-family: "Poppins", sans-serif;
+} 
